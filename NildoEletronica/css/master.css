@@ -1,0 +1,416 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .container {
+    margin: 0;
+  }
+  
+  header {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: rgb(12, 12, 70);
+  };
+  
+  header .logo {
+    margin-left: 5%;
+  }
+  
+  header .logo h1 {
+    height: 2rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+    display: block;
+  }
+  
+  @media all and (min-width:300px) {
+      header .logo h1 {
+          font-size: 1.2rem;
+      }
+  }
+  
+  header nav {
+    width: 100vw;
+  }
+  
+  header nav ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header nav ul a {
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: .5rem 1rem;
+    border-bottom: 1px solid #868686;
+  }
+  
+  header nav ul a:hover {
+    background-color: #e6ce81;
+    border-radius: 4px;
+  }
+  
+  header nav ul a.active {
+    background-color: #e6ce81;
+    color: #fff;
+  }
+  
+  @media all and (min-width:300px){
+    header .logo {
+        margin: 0;
+    }
+    header nav ul{
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    header nav ul a{
+      border-bottom: none;
+    }
+    header nav ul .active{
+      border-radius: 4px;
+    }
+  }
+
+  @media all and (min-width:600px){
+    header{
+      flex-direction: row;
+    }
+    header nav ul{
+      justify-content: flex-end;
+    }
+    header .logo{
+      margin-left: 5%;
+    }
+    header nav ul {
+      margin-right: 5%;
+    }
+  }
+  @media all and (min-width:1200px){
+    header .logo{
+      margin-left: 5%;
+    }
+    header nav ul {
+      margin-right: 5%;
+    }
+    header .container {
+        width: 100vw;
+    }
+  }
+
+  .banner {
+    background: url("../img/conserto3.png");
+    text-align: center;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media all and (min-width: 300px) {
+      .banner{
+        font-size: 13px;
+        height: 16vh;
+      }
+  }
+
+  @media all and (min-width:1200px) {
+      .banner {
+        font-size: 18px;
+        height: 35vh;
+      }  
+  }
+
+.slide h3 {
+    background-color: rgb(12, 12, 70);
+    color: white;
+    /*padding: 15px;*/
+    width: 28vw;
+}
+
+@media all and (min-width:300px) {
+    .slide h3 {
+        padding: 2px 15px;
+        font-size: 0.8rem;
+        width: 30vh;
+    }
+}
+
+@media all and (min-width:450px) {
+    .slide h3 {
+        font-size: 15px;
+        width: 40vh;
+    }
+}
+
+@media all and (min-width:1000px) {
+    .slide h3 {
+        font-size: 18px;
+        width: 50vh;
+        padding: 15px;
+    }
+    .slide .instalacao {
+        font-size: 18px;
+        width: 40vw;
+        padding: 15px;
+        margin-top: 40px;
+    }
+}
+  
+
+/*grid*/
+
+@media (min-width: 300px) {
+  .grid-assist img, .grid-inst img, .grid-vendas img, .grid-vendas2 img {
+    width: 15vh;
+  }
+
+  .grid-assist, .grid-inst, .grid-vendas, .grid-vendas2 {
+    font-size: 0.8rem;
+  }
+
+  .grid-assist .tv, .grid-assist .micro, .grid-assist .pc, .grid-inst .cam1, .grid-inst .cam2, .grid-vendas .mouse, .grid-vendas .teclado, .grid-vendas .pd, .grid-vendas2 .cabos, .grid-vendas2 .controle {
+    background-color: rgb(24, 24, 66);
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    margin: 10px 70px;
+  } 
+}
+
+@media all and (min-width: 1000px) {
+  .grid-assist .tv, .grid-assist .micro, .grid-assist .pc, .grid-inst .cam1, .grid-inst .cam2, .grid-vendas .mouse, .grid-vendas .teclado, .grid-vendas .pd, .grid-vendas2 .cabos, .grid-vendas2 .controle {
+    margin:0;
+  }
+  
+  .grid-assist{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-row: 150px 150px;
+      grid-gap: 10px;
+      margin: 10px;
+      margin-top: 30px;
+  }
+  .grid-assist .tv, .grid-assist .micro, .grid-assist .pc {
+      background-color: rgb(24, 24, 66);
+      color: white;
+      text-align: center;
+      padding-top: 20px;
+  }
+
+  .grid-assist .tv img{
+      width: 20vw;
+  }
+
+  .grid-assist .micro img {
+      width: 18vw;
+      padding-top: 15px;
+  }
+
+  .grid-assist .micro div {
+      margin-top: 25px;
+  }
+
+  .grid-assist .pc img {
+      width: 15vw;
+  }
+
+  .grid-inst{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-row: 150px 150px;
+      grid-gap: 10px;
+      margin: 10px;
+      margin-top: 30px;
+  }
+
+  .grid-inst .cam1, .grid-inst .cam2{
+      background-color: rgb(24, 24, 66);
+      text-align: center;
+      padding-top: 20px;
+      margin: 40px;
+      margin-top: -5px;
+  }
+
+  .grid-inst img{
+      width: 20vw;
+      height: 40vh;
+  }
+
+
+  .grid-vendas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: 150px 150px;
+    grid-gap: 10px;
+    margin: 10px;
+    margin-top: 30px;
+  }
+
+  .grid-vendas2 {      
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: 150px 150px;
+    grid-gap: 10px;
+    margin: 10px;
+    margin-top: 30px;
+  }
+
+  .grid-vendas img, .grid-vendas2 img {
+    width: 15vw;
+  }
+
+  .grid-vendas .mouse, .grid-vendas .teclado, .grid-vendas .pd{
+    background-color: rgb(24, 24, 66);
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .grid-vendas2 .cabos, .grid-vendas2 .controle {
+    background-color: rgb(24, 24, 66);
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    margin: 40px;
+    margin-top: -5px;
+  }
+}
+
+@media all and (min-width:300px) {
+  
+  .contato {
+    font-size: 0.5rem;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+
+  .contato2{
+    display: flex;
+  }
+
+  .contato .whats {
+    display: flex;
+    font-weight: bold;
+  }
+
+  .email {
+    display: flex;
+    font-weight: bold;
+  }
+
+  .final img {
+    width: 6vh;
+  }
+
+  .contato span {
+    font-size: 15px;
+    margin: 13px 5px;
+  }
+
+  .contato .whats, .contato .email{
+    font-size: 0.7rem;
+  }
+
+  .contato .email span {
+    font-size: 23px;
+  }
+
+  .loc {
+    font-size: 0.5rem;
+    margin-left: 10px;
+  }
+
+  .loc .map {
+    width: 90vw;
+    height: 50vh;
+    margin-left: 10px;
+  }
+
+  .loc2 {
+    display: flex;
+  }
+
+  .loc2 span {
+    font-size: 15px;
+    margin: 13px 5px;
+  }
+}
+
+@media all and (min-width:1000px) {
+  .contato {
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .contato span {
+    margin: 28px 10px;
+    font-size: 30px;
+  }
+
+  .final {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+  }
+
+  .final img {
+    width: 10vh;
+  }
+
+  .contato{
+    flex-direction: column;
+    margin-top: -200px;
+  }
+
+  .contato .contato2 {
+    display: flex;
+  }
+
+  .contato .whats, .contato .email {
+    display: flex;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .contato .email span {
+    font-size: 6vh;
+    margin-top: 12px;
+  }
+
+  .loc {
+    font-size: 1.1rem;
+  }
+
+  .loc2 {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .loc2 span {
+    margin: 28px 10px;
+    font-size: 30px;
+  }
+
+  .loc .map {
+    margin-top: 10px;
+    width: 80vh;
+    height: 60vh;
+  }
+}
